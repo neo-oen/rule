@@ -1,4 +1,20 @@
-# 创建者：v2rayse.com 自动创建
+# 创建者：用户自定义节点配置
+# 创建时间：2025-09-27 08:00:00
+
+# 订阅节点配置
+proxy-providers:
+  # 长风机场订阅
+  Airport-changfeng:
+    url: "https://git.io/emzclash"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连
+
+# 单节点配置
 proxies:
 - name: "🇨🇳_CN_中国_1"
   type: "vmess"
