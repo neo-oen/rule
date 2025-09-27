@@ -1,0 +1,12 @@
+# 订阅节点配置
+proxy-providers:
+  # 长风机场订阅
+  Airport-changfeng:
+    url: "https://git.io/emzclash"
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 🚀 默认代理
