@@ -1,1017 +1,274 @@
----
+# 必读！！！
+# 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
+# 跑裸核用户请自行去掉下方控制面板模块的注释。
+
+# 代理提供商配置
 proxy-providers:
+  # 机场订阅配置
   Airport-yifen:
-    url: https://dash.yfjc.xyz/api/v1/client/subscribe?token=4b8c4ac3a44c19d1217e81323e581a6d
+    # 订阅地址
+    url: "https://dash.yfjc.xyz/api/v1/client/subscribe?token=4b8c4ac3a44c19d1217e81323e581a6d"
+    # 订阅类型：http
     type: http
+    # 自动更新间隔：24小时
     interval: 86400
+    # 健康检查配置
     health-check:
+      # 启用健康检查
       enable: true
+      # 检查地址
       url: https://www.gstatic.com/generate_204
+      # 检查间隔：300秒
       interval: 300
+    # 使用直连模式获取订阅
     proxy: 直连
-    path: "./proxy_provider/Airport-yifen"
+
+# 代理节点配置
 proxies:
-- name: US美国(mibei77.com 米贝节点分享)
-  server: pupas-shirting-unsung.freesocks.work
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: p78naCf2EfOlRSLTX0wFVx
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 2
-  server: 193.124.24.247
-  port: 6508
-  type: vmess
-  uuid: b68fead5-5b0b-43a1-c34a-804467f0f368
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: FR法国(mibei77.com 米贝节点分享)
-  server: kampong.org
-  port: 443
-  type: vmess
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 1
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: linkvws
-  ws-headers:
-    Host: kampong.org
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 3
-  server: 193.124.24.247
-  port: 6501
-  type: vmess
-  uuid: 89dc2652-e0a0-4a5c-e203-f837d9f44ce1
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 4
-  server: switcher-nick-croquet.freesocks.work
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 9tqhMdIrTkgQ46PvhyAtMH
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 5
-  server: hackney-latest-strike.freesocks.work
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: XUMTygEM1jVYIvysXKqA5T
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 6
-  server: 193.124.24.247
-  port: 6510
-  type: vmess
-  uuid: 8f44f672-e53b-44fb-b502-c886d37107b5
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 7
-  server: 193.124.24.247
-  port: 6513
-  type: vmess
-  uuid: 5cf7fcbc-e2c1-42c4-d0d7-79c45a7d588d
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 8
-  server: 193.124.24.247
-  port: 6506
-  type: vmess
-  uuid: c53d41d1-7d56-43ce-9994-408780c6476a
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 9
-  server: 193.124.24.247
-  port: 6505
-  type: vmess
-  uuid: b34732f9-2856-4974-8bae-1351928e347f
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 10
-  server: 193.124.24.247
-  port: 6511
-  type: vmess
-  uuid: 5ef4e89b-262f-4c74-e793-c7332079f251
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 11
-  server: 193.124.24.247
-  port: 6507
-  type: vmess
-  uuid: 3003e094-707c-4dbb-faca-4b8d579bc604
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 12
-  server: 193.124.24.247
-  port: 6514
-  type: vmess
-  uuid: c362d735-01a8-48eb-baa2-ae7aa63bfdc3
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 13
-  server: 193.124.24.247
-  port: 6504
-  type: vmess
-  uuid: 7ceb165c-9aff-4ab7-ce9e-1df31a5ed911
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 14
-  server: 193.124.24.247
-  port: 6512
-  type: vmess
-  uuid: 729bfa51-095c-4f50-a1e0-2dfc90d51ebd
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: NL荷兰(mibei77.com 米贝节点分享)
-  server: 45.144.235.103
-  port: 1080
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: aE5rFdxzG8GQf5TAQhZhRA
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 15
-  server: v8.heduian.link
-  port: 30808
-  type: vmess
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/oooo"
-  ws-headers:
-    Host: v8.heduian.link
-  udp: true
-- name: JP日本(mibei77.com 米贝节点分享)
-  server: arxfw2b78fi2q9hzylhn.freesocks.work
-  port: 443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: Nk9asglDzHzjktVzTkvhaA
-  udp: true
-- name: CA加拿大(mibei77.com 米贝节点分享)
-  server: ov-canada3.09vpn.com
-  port: 8443
-  type: vmess
-  uuid: 1a06fe60-0933-4b66-b927-937a5e015c50
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/vmess/"
-  ws-headers:
-    Host: ov-canada3.09vpn.com
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 16
-  server: 193.124.24.247
-  port: 6502
-  type: vmess
-  uuid: 242f22a3-29d9-4a94-d8ba-88043f2e1921
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: FR法国(mibei77.com 米贝节点分享) 2
-  server: 2001:bc8:32d7:302::10
-  port: 44579
-  type: vmess
-  uuid: 8e34e170-13ae-4892-9d20-05962acc9f84
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-path: "/"
-  ws-headers:
-    Host: 2001:bc8:32d7:302::10
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 17
-  server: 193.124.24.247
-  port: 6503
-  type: vmess
-  uuid: 978d0097-dc80-48db-935a-348a08dff336
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: US美国(mibei77.com 米贝节点分享) 18
-  server: 193.124.24.247
-  port: 6515
-  type: vmess
-  uuid: 2f3c646a-37f3-483a-a2a5-6bc1c5e526ae
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: HK香港(mibei77.com 米贝节点分享)
-  server: 183.240.245.242
-  port: 33331
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 直连
-  type: direct
+
+  # 配置直连代理
+  - {name: 直连, type: direct}
+
+# 全局配置部分
+# HTTP代理端口
 port: 7890
+# SOCKS5代理端口
 socks-port: 7891
+# 透明代理端口
 redir-port: 7892
+# 混合代理端口
 mixed-port: 7893
-tproxy-port: 7895
+# TProxy代理端口
+tproxy-port: 7894
+# 允许局域网连接
 allow-lan: true
+# 绑定所有IP地址
 bind-address: "*"
+# 禁用IPv6
 ipv6: false
+# 启用统一延迟显示
 unified-delay: true
+# 启用TCP并发
 tcp-concurrent: true
+# 网络接口名称（已注释）
+# interface-name: enp6s18
+# 日志级别：警告
 log-level: warning
+# 进程查找模式：关闭
 find-process-mode: 'off'
+# 全局客户端指纹：Chrome
 global-client-fingerprint: chrome
+# 空闲连接保持时间：600秒
 keep-alive-idle: 600
+# 心跳包发送间隔：15秒
 keep-alive-interval: 15
+# 配置文件设置
 profile:
+  # 保存选择的节点
   store-selected: true
+  # 保存Fake-IP
   store-fake-ip: true
+
+# 控制面板配置（默认注释）
+# 为防止使用插件朋友遇到面板问题，此模块默认注释。
+# 跑裸核用户自行删除注释，使用nikki仅内核时ui路径改为/etc/nikki/run/ui
+# 控制面板监听地址和端口
+#external-controller: 0.0.0.0:9090
+# 控制面板访问密码
+#secret: ""
+# 控制面板UI路径
+#external-ui: "/etc/mihomo/ui"
+# 控制面板UI名称
+#external-ui-name: zashboard
+# 控制面板UI下载地址
+#external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
+
+# 流量嗅探配置
 sniffer:
+  # 启用嗅探
   enable: true
+  # 协议嗅探配置
   sniff:
+    # HTTP协议嗅探
     HTTP:
-      ports:
-      - 80
-      - 8080-8880
+      # 监听端口
+      ports: [80, 8080-8880]
+      # 覆盖目标地址
       override-destination: true
+    # TLS协议嗅探
     TLS:
-      ports:
-      - 443
-      - 8443
+      # 监听端口
+      ports: [443, 8443]
+    # QUIC协议嗅探
     QUIC:
-      ports:
-      - 443
-      - 8443
+      # 监听端口
+      ports: [443, 8443]
+  # 强制域名嗅探列表
   force-domain:
-  - "+.v2ex.com"
+    - "+.v2ex.com"
+  # 跳过域名嗅探列表
   skip-domain:
-  - "+.baidu.com"
+    - "+.baidu.com"
+
+# TUN设备配置
 tun:
+  # 启用TUN设备
   enable: true
+  # TUN栈类型：system/gvisor/mixed
   stack: mixed
-  device: utun
-  dns-hijack:
-  - 127.0.0.1:53
-  endpoint-independent-nat: true
-  auto-route: false
-  auto-detect-interface: false
-  auto-redirect: false
-  strict-route: false
+  # DNS劫持设置
+  dns-hijack: ["any:53", "tcp://any:53"]
+  # Nikki配置说明
+  # 使用nikki时，混入全部不修改的情况，开启接口指定为nikki
+  # 使用仅内核时自行修改下面三项为true
+  # TUN设备名称
+  #device: nikki
+  # 自动配置路由
+  auto-route: true
+  # 自动重定向流量
+  auto-redirect: true
+  # 自动检测网络接口
+  auto-detect-interface: true
+
+# DNS服务配置
 dns:
+  # 启用DNS服务
   enable: true
-  listen: 0.0.0.0:7874
+  # DNS监听地址
+  listen: 0.0.0.0:1053
+  # 禁用IPv6
   ipv6: false
+  # 遵循规则设置
   respect-rules: true
+  # DNS解析模式：fake-ip
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
+  # Fake-IP地址范围
+  fake-ip-range: 28.0.0.1/8
+  # Fake-IP过滤模式：黑名单
   fake-ip-filter-mode: blacklist
+  # Fake-IP过滤规则
   fake-ip-filter:
-  - rule-set:private_domain,cn_domain
-  - "+.msftconnecttest.com"
-  - "+.msftncsi.com"
-  - time.*.com
-  - "+.market.xiaomi.com"
+    # 私有域名和中国域名
+    - "rule-set:private_domain,cn_domain"
+    # Windows网络连接测试域名
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    # 时间服务器域名
+    - "time.*.com"
+    # 小米应用市场域名
+    - "+.market.xiaomi.com"
+  # 默认DNS服务器
   default-nameserver:
-  - 223.5.5.5
+    - 223.5.5.5
+  # 代理DNS服务器
   proxy-server-nameserver:
-  - https://223.5.5.5/dns-query
+    - https://223.5.5.5/dns-query
+  # 首选DNS服务器（建议使用运营商DNS）
   nameserver:
-  - 223.5.5.5
-  - 119.29.29.29
+    - 223.5.5.5
+    - 119.29.29.29
+ 
+# 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
+# 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
+# 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
+#故障转移-出现问题，才会选择下一个，自动切换-根据实时测试的网络延迟选择最优的节点，
 proxy-groups:
-- name: "\U0001F680 默认代理"
-  type: select
-  proxies:
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F4F9 YouTube"
-  type: select
-  proxies:
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 美国自动"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F340 Google"
-  type: select
-  proxies:
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F916 ChatGPT"
-  type: select
-  proxies:
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F468\U0001F3FF‍\U0001F4BB GitHub"
-  type: select
-  proxies:
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F30D 其他节点自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F42C OneDrive"
-  type: select
-  proxies:
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001FA9F Microsoft"
-  type: select
-  proxies:
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F3B5 TikTok"
-  type: select
-  proxies:
-  - "\U0001F4B0 日本低价自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F30D 其他节点自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F4F2 Telegram"
-  type: select
-  proxies:
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F30D 其他节点自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F3A5 NETFLIX"
-  type: select
-  proxies:
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F30D 其他节点自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F4B6 PayPal"
-  type: select
-  proxies:
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F41F 漏网之鱼"
-  type: select
-  proxies:
-  - "\U0001F680 默认代理"
-  - "\U0001F52F 香港故转"
-  - "\U0001F52F 日本故转"
-  - "\U0001F52F 狮城故转"
-  - "\U0001F52F 美国故转"
-  - "\U0001F52F 韩国故转"
-  - "\U0001F52F 荷兰故转"
-  - "\U0001F52F 英国故转"
-  - "♻️ 香港自动"
-  - "♻️ 日本自动"
-  - "♻️ 狮城自动"
-  - "♻️ 美国自动"
-  - "♻️ 韩国自动"
-  - "♻️ 荷兰自动"
-  - "♻️ 英国自动"
-  - "\U0001F4B0 美国低价自动"
-  - "\U0001F4B0 日本低价自动"
-  - "♻️ 自动选择"
-  - "\U0001F1ED\U0001F1F0 香港节点"
-  - "\U0001F1EF\U0001F1F5 日本节点"
-  - "\U0001F1F8\U0001F1EC 狮城节点"
-  - "\U0001F1FA\U0001F1F2 美国节点"
-  - "\U0001F1F0\U0001F1F7 韩国节点"
-  - "\U0001F1F3\U0001F1F1 荷兰节点"
-  - "\U0001F1EC\U0001F1E7 英国节点"
-  - "\U0001F310 全部节点"
-  - 直连
-- name: "\U0001F1ED\U0001F1F0 香港节点"
-  type: select
-  include-all: true
-  filter: "(?i)港|hk|hongkong|hong kong"
-- name: "\U0001F1EF\U0001F1F5 日本节点"
-  type: select
-  include-all: true
-  filter: "(?i)日|jp|japan"
-- name: "\U0001F1F8\U0001F1EC 狮城节点"
-  type: select
-  include-all: true
-  filter: "(?i)新加坡|坡|狮城|SG|Singapore"
-- name: "\U0001F1FA\U0001F1F2 美国节点"
-  type: select
-  include-all: true
-  filter: "(?i)美|us|unitedstates|united states"
-- name: "\U0001F1F0\U0001F1F7 韩国节点"
-  type: select
-  include-all: true
-  filter: "(?i)韩|kr|korea"
-- name: "\U0001F1F3\U0001F1F1 荷兰节点"
-  type: select
-  include-all: true
-  filter: "(?i)荷兰|nl|netherlands"
-- name: "\U0001F1EC\U0001F1E7 英国节点"
-  type: select
-  include-all: true
-  filter: "(?i)英|uk|britain|united kingdom"
-- name: "\U0001F52F 香港故转"
-  type: fallback
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"
-- name: "\U0001F52F 日本故转"
-  type: fallback
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"
-- name: "\U0001F52F 狮城故转"
-  type: fallback
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(台|日|韩|深|美)).)*$"
-- name: "\U0001F52F 美国故转"
-  type: fallback
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|韩|新|日)).)*$"
-- name: "\U0001F52F 韩国故转"
-  type: fallback
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(韩|KR|(?i)Korea))^((?!(港|台|日|新|美)).)*$"
-- name: "\U0001F52F 荷兰故转"
-  type: fallback
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(荷兰|NL|(?i)Netherlands))^((?!(港|台|韩|新|日|美)).)*$"
-- name: "\U0001F52F 英国故转"
-  type: fallback
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(英|UK|(?i)Britain|Kingdom))^((?!(港|台|韩|新|日|美)).)*$"
-- name: "♻️ 香港自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"
-- name: "♻️ 日本自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"
-- name: "♻️ 狮城自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$"
-- name: "♻️ 美国自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"
-- name: "♻️ 韩国自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(韩|KR|(?i)Korea))^((?!(港|台|日|新|美)).)*$"
-- name: "♻️ 荷兰自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(荷兰|NL|(?i)Netherlands))^((?!(港|台|韩|新|日|美)).)*$"
-- name: "♻️ 英国自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(英|UK|(?i)Britain|Kingdom))^((?!(港|台|韩|新|日|美)).)*$"
-- name: "♻️ 自动选择"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "^((?!(直连)).)*$"
-- name: "\U0001F310 全部节点"
-  type: select
-  include-all: true
-- name: "\U0001F30D 其他节点自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "^((?!(港|HK|Hong|日|JP|Japan|新加坡|坡|狮城|SG|Singapore|美|US|States|America|韩|KR|Korea|荷兰|NL|Netherlands|英|UK|Britain|Kingdom|直连)).)*$"
-- name: "\U0001F4B0 美国低价自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(美|US|(?i)States|America))(?=.*0[.][0-9])^((?!(港|台|日|韩|新)).)*$"
-- name: "\U0001F4B0 日本低价自动"
-  type: url-test
-  include-all: true
-  tolerance: 20
-  interval: 300
-  filter: "(?=.*(日|JP|(?i)Japan))(?=.*0[.][0-9])^((?!(港|台|韩|新|美)).)*$"
+  - {name: 🚀 默认代理, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [💰 美国低价自动, 💰 日本低价自动,🔯 美国故转, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 美国自动, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🍀 Google, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择,  🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 🌍 其他节点自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🐬 OneDrive, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🪟 Microsoft, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🎵 TikTok, type: select, proxies: [💰 日本低价自动,💰 美国低价自动, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 🌍 其他节点自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 📲 Telegram, type: select, proxies: [💰 美国低价自动, 💰 日本低价自动,🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 🌍 其他节点自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🎥 NETFLIX, type: select, proxies: [💰 美国低价自动, 💰 日本低价自动,🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 🌍 其他节点自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 💶 PayPal, type: select, proxies: [🔯 日本故转, 🔯 香港故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, 🔯 韩国故转, 🔯 荷兰故转, 🔯 英国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 韩国自动, ♻️ 荷兰自动, ♻️ 英国自动, 💰 美国低价自动, 💰 日本低价自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🇰🇷 韩国节点, 🇳🇱 荷兰节点, 🇬🇧 英国节点, 🌐 全部节点, 直连]}
+  - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
+  - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
+  - {name: 🇸🇬 狮城节点, type: select, include-all: true, filter: "(?i)新加坡|坡|狮城|SG|Singapore"}
+  - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
+  - {name: 🇰🇷 韩国节点, type: select, include-all: true, filter: "(?i)韩|kr|korea"}
+  - {name: 🇳🇱 荷兰节点, type: select, include-all: true, filter: "(?i)荷兰|nl|netherlands"}
+  - {name: 🇬🇧 英国节点, type: select, include-all: true, filter: "(?i)英|uk|britain|united kingdom"}
+  - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+  - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: 🔯 狮城故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(台|日|韩|深|美)).)*$"}
+  - {name: 🔯 美国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|韩|新|日)).)*$" }
+  - {name: 🔯 韩国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(港|台|日|新|美)).)*$" }
+  - {name: 🔯 荷兰故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(荷兰|NL|(?i)Netherlands))^((?!(港|台|韩|新|日|美)).)*$" }
+  - {name: 🔯 英国故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)Britain|Kingdom))^((?!(港|台|韩|新|日|美)).)*$" }
+  - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
+  - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
+  - {name: ♻️ 狮城自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$" }
+  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
+  - {name: ♻️ 韩国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(韩|KR|(?i)Korea))^((?!(港|台|日|新|美)).)*$"}
+  - {name: ♻️ 荷兰自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(荷兰|NL|(?i)Netherlands))^((?!(港|台|韩|新|日|美)).)*$"}
+  - {name: ♻️ 英国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(英|UK|(?i)Britain|Kingdom))^((?!(港|台|韩|新|日|美)).)*$"}
+  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: 🌐 全部节点, type: select, include-all: true}
+  # 其他节点自动分组（排除特定国家/地区节点）
+  - {name: 🌍 其他节点自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(港|HK|Hong|日|JP|Japan|新加坡|坡|狮城|SG|Singapore|美|US|States|America|韩|KR|Korea|荷兰|NL|Netherlands|英|UK|Britain|Kingdom|直连)).)*$"}
+  # 美国低价节点自动分组
+  - {name: 💰 美国低价自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))(?=.*0[.][0-9])^((?!(港|台|日|韩|新)).)*$"}
+  # 日本低价节点自动分组
+  - {name: 💰 日本低价自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))(?=.*0[.][0-9])^((?!(港|台|韩|新|美)).)*$"}
+
+# 规则匹配 具体哪个网站，哪个ip地址走什么节点。
+# 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-- RULE-SET,private_ip,直连,no-resolve
-- RULE-SET,private_domain,直连
-- "DOMAIN-SUFFIX,qichiyu.com,\U0001F680 默认代理"
-- "RULE-SET,proxylite,\U0001F680 默认代理"
-- "RULE-SET,ai,\U0001F916 ChatGPT"
-- "RULE-SET,github_domain,\U0001F468\U0001F3FF‍\U0001F4BB GitHub"
-- "RULE-SET,youtube_domain,\U0001F4F9 YouTube"
-- "RULE-SET,google_domain,\U0001F340 Google"
-- "RULE-SET,onedrive_domain,\U0001F42C OneDrive"
-- "RULE-SET,microsoft_domain,\U0001FA9F Microsoft"
-- RULE-SET,apple_domain,直连
-- "RULE-SET,tiktok_domain,\U0001F3B5 TikTok"
-- "RULE-SET,telegram_domain,\U0001F4F2 Telegram"
-- "RULE-SET,netflix_domain,\U0001F3A5 NETFLIX"
-- "RULE-SET,paypal_domain,\U0001F4B6 PayPal"
-- RULE-SET,apple_ip,直连,no-resolve
-- "RULE-SET,google_ip,\U0001F340 Google,no-resolve"
-- "RULE-SET,netflix_ip,\U0001F3A5 NETFLIX,no-resolve"
-- "RULE-SET,telegram_ip,\U0001F4F2 Telegram,no-resolve"
-- "RULE-SET,geolocation-!cn,\U0001F680 默认代理"
-- RULE-SET,cn_domain,直连
-- RULE-SET,cn_ip,直连
-- "MATCH,\U0001F41F 漏网之鱼"
+  - RULE-SET,private_ip,直连,no-resolve
+  - RULE-SET,private_domain,直连
+  - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
+  - RULE-SET,proxylite,🚀 默认代理
+  - RULE-SET,ai,🤖 ChatGPT
+  - RULE-SET,github_domain,👨🏿‍💻 GitHub
+  - RULE-SET,youtube_domain,📹 YouTube
+  - RULE-SET,google_domain,🍀 Google
+  - RULE-SET,onedrive_domain,🐬 OneDrive
+  - RULE-SET,microsoft_domain,🪟 Microsoft
+  - RULE-SET,apple_domain,直连
+  - RULE-SET,tiktok_domain,🎵 TikTok
+  - RULE-SET,telegram_domain,📲 Telegram
+  - RULE-SET,netflix_domain,🎥 NETFLIX
+  - RULE-SET,paypal_domain,💶 PayPal
+  - RULE-SET,apple_ip,直连,no-resolve
+  - RULE-SET,google_ip,🍀 Google,no-resolve
+  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
+  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+  - RULE-SET,geolocation-!cn,🚀 默认代理
+  - RULE-SET,cn_domain,直连
+  - RULE-SET,cn_ip,直连
+  - MATCH,🐟 漏网之鱼
+
+# 规则集 区分网站和ip集合都是谁。
+## type：可选http/file/inline  behavior：可选domain/ipcidr/classical format：可选yaml/text/mrs
 rule-anchor:
-  ip:
-    type: http
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-  domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-  class:
-    type: http
-    interval: 86400
-    behavior: classical
-    format: text
-rule-providers:
-  private_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs
-    path: "./rule_provider/private_domain"
-  proxylite:
-    type: http
-    interval: 86400
-    behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/neo-oen/rule/refs/heads/main/proxy.list
-    path: "./rule_provider/proxylite"
-  ai:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs
-    path: "./rule_provider/ai"
-  youtube_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs
-    path: "./rule_provider/youtube_domain"
-  google_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs
-    path: "./rule_provider/google_domain"
-  github_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs
-    path: "./rule_provider/github_domain"
-  telegram_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs
-    path: "./rule_provider/telegram_domain"
-  netflix_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs
-    path: "./rule_provider/netflix_domain"
-  paypal_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs
-    path: "./rule_provider/paypal_domain"
-  onedrive_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs
-    path: "./rule_provider/onedrive_domain"
-  microsoft_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs
-    path: "./rule_provider/microsoft_domain"
-  apple_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs
-    path: "./rule_provider/apple_domain"
-  speedtest_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs
-    path: "./rule_provider/speedtest_domain"
-  tiktok_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs
-    path: "./rule_provider/tiktok_domain"
-  geolocation-!cn:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs
-    path: "./rule_provider/geolocation-!cn"
-  cn_domain:
-    type: http
-    interval: 86400
-    behavior: domain
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs
-    path: "./rule_provider/cn_domain"
-  private_ip:
-    type: http
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs
-    path: "./rule_provider/private_ip"
-  cn_ip:
-    type: http
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs
-    path: "./rule_provider/cn_ip"
-  google_ip:
-    type: http
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs
-    path: "./rule_provider/google_ip"
-  telegram_ip:
-    type: http
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs
-    path: "./rule_provider/telegram_ip"
-  netflix_ip:
-    type: http
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs
-    path: "./rule_provider/netflix_ip"
-  apple_ip:
-    type: http
-    interval: 86400
-    behavior: ipcidr
-    format: mrs
-    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs
-    path: "./rule_provider/apple_ip"
-mode: rule
-external-controller: 0.0.0.0:9090
-secret: qaz147258
-external-ui: "/usr/share/openclash/ui"
-external-ui-name: metacubexd
-geodata-loader: memconservative
-geox-url: {}
+  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
+  domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
+  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+rule-providers: 
+  private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
+  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/neo-oen/rule/refs/heads/main/proxy.list"}
+  ai: {  <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
+  youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
+  google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
+  github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
+  telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
+  netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
+  paypal_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.mrs"}
+  onedrive_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/onedrive.mrs"}
+  microsoft_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"}
+  apple_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple-cn.mrs"}
+  speedtest_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/ookla-speedtest.mrs"}
+  tiktok_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
+  geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs"}
+  cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs"}
+  
+  private_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/private.mrs"}
+  cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs"}
+  google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
+  telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
+  netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
+  apple_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
