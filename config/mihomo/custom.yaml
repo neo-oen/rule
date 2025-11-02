@@ -3,104 +3,263 @@
 
 # 单节点配置
 proxies:
-- name: "🇺🇸_US_美国"
-  type: "trojan"
-  server: "uk-03.allhubb.info"
-  port: 8443
-  password: "1ce1df7962f71c6f"
-  network: "tcp"
-- name: "🇩🇪_DE_德国"
-  type: "ss"
-  server: "46.183.184.60"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
-- name: "🇨🇳_CN_中国->🇺🇸_US_美国"
-  type: "vmess"
-  server: "v29.heduian.link"
-  port: 30829
-  sni: ""
-  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-  cipher: "auto"
-  network: "ws"
-  skip-cert-verify: true
-  ws-opts:
-    path: "/oooo"
-    headers:
-      host: "v29.heduian.link"
-  alterId: 2
-- name: "🇸🇪_SE_瑞典"
-  type: "ss"
-  server: "192.71.166.100"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
-- name: "🇬🇧_GB_英国_1"
-  type: "ss"
-  server: "62.100.205.48"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
-- name: "🇬🇧_GB_英国_2"
-  type: "ssr"
-  server: "62.100.205.48"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
-  obfs: "plain"
-  protocol: "origin"
-- name: "🇰🇷_KR_韩国"
-  type: "ss"
-  server: "154.223.16.212"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
-- name: "🇨🇳_CN_中国_1"
-  type: "vmess"
-  server: "v29.heduian.link"
-  port: 30829
-  sni: ""
-  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-  cipher: "auto"
-  network: "ws"
-  skip-cert-verify: true
-  ws-opts:
-    path: "/oooo"
-    headers:
-      host: "ocbc.com"
-  alterId: 2
-- name: "🇺🇸_US_美国"
-  type: "trojan"
-  server: "uk-03.allhubb.info"
-  port: 8443
-  password: "1ce1df7962f71c6f"
-- name: "未知"
-  type: "ss"
-  server: "103.186.154.70"
-  port: 38388
-  cipher: "aes-256-cfb"
-  password: "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
-- name: "🇬🇧_GB_英国"
-  type: "ss"
-  server: "62.100.205.48"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
-- name: "未知_1"
-  type: "ss"
-  server: "103.186.154.230"
-  port: 38388
-  cipher: "aes-256-cfb"
-  password: "Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV"
-- name: "🇸🇰_SK_斯洛伐克->🇷🇺_RU_俄罗斯"
-  type: "ss"
-  server: "156.146.40.194"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
-- name: "🇸🇪_SE_瑞典"
-  type: "ss"
-  server: "192.71.166.100"
-  port: 989
-  cipher: "aes-256-cfb"
-  password: "f8f7aCzcPKbsF8p3"
+  - type: vmess
+    name: 🇭🇰 HK_89
+    server: 77e1818c-t13gg0-t5fh9u-1uni.hk3.p5pv.com
+    port: 80
+    uuid: adbd0a82-3336-11ed-bd7c-f23c913c8d2b
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: trojan
+    name: 🇨🇳_CN_中国
+    server: 36.151.192.242
+    port: 194
+    password: BxceQaOe
+    network: tcp
+    skip-cert-verify: true
+  - type: vmess
+    name: 🇭🇰 HK_324
+    server: 10cd2f16-sv2sg0-t7hu58-1q1la.hk3.p5pv.com
+    port: 80
+    uuid: 25b46954-9a33-11ee-8b86-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1213
+    server: 2e617951-sv2sg0-taj9mo-1tco3.hk3.p5pv.com
+    port: 80
+    uuid: e29de954-ea01-11ef-a271-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_213
+    server: a731a8b3-sv2sg0-sy1a0y-1iyov.hk3.p5pv.com
+    port: 80
+    uuid: 33629870-e57e-11ec-bb74-f23c9164ca5d
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_210
+    server: 9d27188f-t00kg0-t9byd7-1jfvb.hk3.p5pv.com
+    port: 80
+    uuid: 06b2ac52-fcc6-11ec-bb74-f23c9164ca5d
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_231
+    server: 360de725-sv4n40-t2y63q-1jk6u.hk3.p5pv.com
+    port: 80
+    uuid: 45bc25b2-1a10-11ed-91c0-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1223
+    server: 7f346235-sv4n40-t76x2i-wj6v.hk3.p5pv.com
+    port: 80
+    uuid: 847c03b2-0a9d-11eb-a8bf-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1226
+    server: 6dbaea45-sv0xs0-t9i7o2-1lt20.hk3.p5pv.com
+    port: 80
+    uuid: bf4ec108-f2b7-11ef-b654-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1215
+    server: 00711758-sva740-tbrhck-1thqb.hk3.p5pv.com
+    port: 80
+    uuid: 4f4c6876-fcf6-11ef-94aa-f23c913c8d2b
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_72
+    server: d5dc60aa-t0kxs0-t1nwsn-1la2q.hk3.p5pv.com
+    port: 80
+    uuid: 431026c8-7397-11ed-a8bf-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_86
+    server: f0364aea-t13gg0-t1rksu-1ssud.hk3.p5pv.com
+    port: 80
+    uuid: e6aa39b6-f0b5-11ef-bca1-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1220
+    server: 4c2c02b9-sv2sg0-sv75lj-1swf9.hk3.p5pv.com
+    port: 80
+    uuid: 2bb1edc8-fa5d-11ef-9dd9-f23c9164ca5d
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1224
+    server: 6bdf8f31-sv2sg0-tdh9w7-ahsb.hk3.p5pv.com
+    port: 80
+    uuid: 2e42c1ee-aaaa-11ec-bb74-f23c9164ca5d
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_83
+    server: 64309899-t15b40-t2c3sq-1spnr.hk3.p5pv.com
+    port: 80
+    uuid: 127e3f92-f714-11ef-bbb0-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vless
+    name: 🇺🇸_US_美国
+    server: 199.34.230.114
+    port: 2053
+    uuid: b27e35a7-51f4-468e-8921-56a4901dd923
+    network: ws
+    servername: om1.omidsuccess.uk
+    tls: true
+    ws-opts:
+      path: /containers/de
+      headers:
+        Host: om1.omidsuccess.uk
+    client-fingerprint: chrome
+  - type: ss
+    name: 🇨🇳_CN_中国_1
+    server: sl.fgmcx.top
+    port: 41047
+    cipher: chacha20-ietf-poly1305
+    password: 014e90df-a3ee-4654-a9f6-d118e02dd02a
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1229
+    server: dfed4efb-t4n8g0-t636g9-luwe.hk3.p5pv.com
+    port: 80
+    uuid: a2b0fd2b-716f-0df8-d4e2-03a1c00e5f1a
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰HK-219.77.235.50-1214
+    server: 1dd7778a-sv4n40-szxh9w-46gc.hk3.p5pv.com
+    port: 80
+    uuid: 225d1cca-d744-11ef-b790-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_108
+    server: 45c56923-sucv40-tcop2n-tl32.hk3.p5pv.com
+    port: 80
+    uuid: 5c02ab88-7b9c-11ea-8fc9-f23c913c8d2b
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
+  - type: vmess
+    name: 🇭🇰 HK_171
+    server: b8ffcda3-sv2sg0-sv37gm-81nv.hk3.p5pv.com
+    port: 80
+    uuid: 47e91fb6-25b8-df52-bc18-3cdc8548192f
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: broadcastlv.chat.bilibili.com
+    ws-opts:
+      path: /
+      headers:
+        Host: broadcastlv.chat.bilibili.com
