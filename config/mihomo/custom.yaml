@@ -3,19 +3,24 @@
 
 # 单节点配置
 proxies:
-  - type: trojan
-    name: 🇨🇳_CN_中国
-    server: 116.49.237.130
-    port: 2673
-    password: BxceQaOe
-    network: tcp
-    sni: t.me/ripaojiedian
-    skip-cert-verify: true
   - type: vmess
-    name: 🇭🇰HK²_3|1.2MB/s|2%|GPT|YT|X
+    name: 🇭🇰HK²_3|0.6MB/s|0%|YT|D+|X|KeepHistory
+    server: 6bbacbda-t1ekg0-t2uo6p-yjq0.hk3.p5pv.com
+    port: 80
+    uuid: 25b2699a-e18e-11ec-8e69-f23c91cfbbc9
+    alterId: 2
+    network: ws
+    cipher: auto
+    servername: 6bbacbda-t1ekg0-t2uo6p-yjq0.hk3.p5pv.com
+    ws-opts:
+      path: /
+      headers:
+        Host: 6bbacbda-t1ekg0-t2uo6p-yjq0.hk3.p5pv.com
+  - type: vmess
+    name: 中国 - 香港 - Hong Kong Telecommunications (HKT) Limited Mass Internet - 2
     server: hkt.gotochinatown.net
     port: 80
-    uuid: 21747146-3507-11ed-bb74-f23c9164ca5d
+    uuid: 25b2699a-e18e-11ec-8e69-f23c91cfbbc9
     alterId: 2
     network: ws
     cipher: auto
@@ -25,123 +30,95 @@ proxies:
       headers:
         Host: hkt.gotochinatown.net
   - type: trojan
-    name: 🇨🇳_CN_中国_1
-    server: 58.152.26.173
+    name: 🇨🇳_CN_中国
+    server: levuior.missionsec.us
     port: 443
-    password: BxceQaOe
+    password: ZZRSKlyjjAR36CS0CD8uYFBgNODpgTeC9A7aERSp3aFaq42na8KZzuDIn3D9Yw3xX3A6e
     network: tcp
-    sni: t.me/ripaojiedian
+    sni: levuior.missionsec.us
     skip-cert-verify: true
-  - type: ss
-    name: 🇨🇳_CN_中国_2
-    server: slur.izenny.com
-    port: 40063
-    cipher: chacha20-ietf-poly1305
-    password: db8a0e6b-5fd7-435d-9558-5c86b0679c4d
-  - type: ss
-    name: 🇨🇳_CN_中国_3
-    server: slur.izenny.com
-    port: 55407
-    cipher: chacha20-ietf-poly1305
-    password: d9b85218-da37-42a7-8906-67bab810252c
-  - type: ss
-    name: 🇨🇳_CN_中国_4
-    server: slur.izenny.com
-    port: 48907
-    cipher: chacha20-ietf-poly1305
-    password: db8a0e6b-5fd7-435d-9558-5c86b0679c4d
-  - type: ss
-    name: 🇨🇳_CN_中国_5
-    server: slur.izenny.com
-    port: 32009
-    cipher: chacha20-ietf-poly1305
-    password: d9b85218-da37-42a7-8906-67bab810252c
-  - type: trojan
-    name: 🇺🇸_US_美国
-    server: usygh.zippydeal.xyz
-    port: 5710
-    password: fg20mtCFHy
-    network: tcp
-    sni: usygh.zippydeal.xyz
-    skip-cert-verify: true
-  - type: ss
-    name: 🇰🇷_KR_韩国
-    server: 54.180.234.116
-    port: 80
-    cipher: aes-256-gcm
-    password: dada0801
-  - type: vless
-    name: 🇩🇪_DE_德国
-    server: 78.47.80.152
+  - type: vmess
+    name: 🇯🇵JP²_2|0.6MB/s|GPT⁺|GM|YT|TK|X
+    server: n1744454503.4u9ma.icu
     port: 443
-    uuid: Warpi-Free-Vpn-In-GooglePlay
-    network: tcp
-    encryption: none
-  - type: ss
-    name: 🇦🇺_AU_澳大利亚
-    server: 185.234.145.250
-    port: 8443
-    cipher: chacha20-ietf-poly1305
-    password: AA51kVovHrYCEFntBjOFfP
-  - type: vless
-    name: 🇷🇺_RU_俄罗斯
-    server: 81.161.98.228
-    port: 1443
-    uuid: 00f02ab2-6f2d-449f-a089-d182a2fac59a
+    uuid: 6319c3a4-d27e-423e-8a46-f63c24a99519
+    alterId: 0
     network: ws
-    servername: cdn.filterai.ru
+    cipher: auto
+    ws-opts:
+      path: /
+    tls: true
+  - type: vless
+    name: 🇧🇬_BG_保加利亚
+    server: 178.239.123.216
+    port: 24443
+    uuid: aa7f42cc-616f-4550-9a87-4b85bb409121
+    network: ws
+    servername: vless3.datatestvless.click
     tls: true
     ws-opts:
-      path: /websocketpl
+      path: /
       headers:
-        Host: cdn.filterai.ru
+        Host: vless3.datatestvless.click
     client-fingerprint: chrome
+  - type: vless
+    name: 🇸🇦_SA_沙特阿拉伯
+    server: 77.110.119.225
+    port: 443
+    uuid: 4819860c-0e62-4804-9c59-967e5c2bed7a
+    network: tcp
+    servername: st.ozone.ru
+    tls: true
+    reality-opts:
+      public-key: hnec5SxCD6Os-u0FNi_YS5CML1a_oWb0niZJ1mGuFBo
+      short-id: 07e904766d29b958
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
   - type: ss
-    name: 🇨🇳_CN_中国_6
-    server: slur.izenny.com
-    port: 57577
-    cipher: chacha20-ietf-poly1305
-    password: db8a0e6b-5fd7-435d-9558-5c86b0679c4d
+    name: 🇮🇪_IE_爱尔兰
+    server: 3.252.162.214
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
   - type: trojan
-    name: 🇺🇸_US_美国_1
+    name: 🇺🇸_US_美国
     server: 38.180.72.162
     port: 2053
     password: eb7339c5-70e4-4c7b-b5ef-4128adc8136a
     network: ws
     sni: joss.gpj1.web.id
-    fingerprint: randomized
     tls: true
     ws-opts:
       path: /Free-VPN-CF-Geo-Project/38.180.72.162=2053
       headers:
         Host: joss.gpj1.web.id
-  - type: ss
-    name: 🇺🇦_UA_乌克兰
-    server: 213.111.132.46
-    port: 8443
-    cipher: chacha20-ietf-poly1305
-    password: VIxmBLIylEewLSsAOpChqn
-  - type: ss
-    name: 🇰🇷_KR_韩国_1
-    server: 13.124.194.133
-    port: 80
-    cipher: aes-256-gcm
-    password: dada0801
-  - type: vless
-    name: 🇷🇺_RU_俄罗斯_1
-    server: 178.130.43.35
+  - type: trojan
+    name: 🇷🇺_RU_俄罗斯
+    server: 91.103.253.193
     port: 443
-    uuid: id8567660651
-    network: tcp
-    servername: ozon.ru
+    password: 1a758d17-149a-47f3-9336-d1cc33232cc9
+    network: ws
+    sni: joss.gpj1.web.id
+    fingerprint: chrome
     tls: true
-    encryption: none
-    reality-opts:
-      public-key: 0IGwg1a5Gz3UdIbftPAkdWM6Qwy5EeoHEKqzx7GA_kQ
-      short-id: "8643"
-      spider-x: /11i8kFFdlH5ahmL
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
+    ws-opts:
+      path: /Free-VPN-CF-Geo-Project/91.103.253.193=443
+      headers:
+        Host: joss.gpj1.web.id
+  - type: ss
+    name: 🇮🇪_IE_爱尔兰_1
+    server: 34.245.193.205
+    port: 443
+    cipher: aes-256-cfb
+    password: amazonskr05
+  - type: vmess
+    name: 🇮🇹IT²_1|2.6MB/s|27%|GPT⁺|TK-NL|NF|X|KeepHistory
+    server: v5.heduian.link
+    port: 30805
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    network: tcp
+    cipher: auto
   - type: trojan
     name: 🇨🇭_CH_瑞士
     server: 138.124.30.8
@@ -149,18 +126,88 @@ proxies:
     password: 0311306e-56d4-4aa1-bde5-8cede7fcd3e4
     network: ws
     sni: joss.gpj1.web.id
-    fingerprint: randomized
-    tls: true
     ws-opts:
       path: /Free-VPN-CF-Geo-Project/138.124.30.8=443
       headers:
         Host: joss.gpj1.web.id
-  - type: ss
-    name: 🇮🇪_IE_爱尔兰
-    server: 3.254.86.168
+  - type: vmess
+    name: 🇺🇸US²_1|0.9MB/s|0%|GPT⁺|YT|TK|NF|X|KeepSucceed
+    server: 82.198.246.97
+    port: 180
+    uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+    alterId: 0
+    network: tcp
+    cipher: auto
+  - type: vless
+    name: 🇺🇸_US_美国_1
+    server: www.speedtest.net
+    port: 80
+    uuid: 6d651624-65eb-40c6-94ae-d0e5df90c0ad
+    network: ws
+    servername: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+    encryption: none
+    ws-opts:
+      path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy
+      headers:
+        Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+  - type: vless
+    name: 🇺🇸_US_美国_2
+    server: 172.66.156.81
+    port: 80
+    uuid: 6d651624-65eb-40c6-94ae-d0e5df90c0ad
+    network: ws
+    servername: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+    encryption: none
+    ws-opts:
+      path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy
+      headers:
+        Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+  - type: trojan
+    name: 🇨🇳_CN_中国_1
+    server: 219.79.165.55
     port: 443
+    password: BxceQaOe
+    network: tcp
+    sni: t.me/ripaojiedian
+    skip-cert-verify: true
+  - type: ss
+    name: 🇩🇪_DE_德国
+    server: 46.183.184.60
+    port: 989
     cipher: aes-256-cfb
-    password: amazonskr05
+    password: f8f7aCzcPKbsF8p3
+  - type: trojan
+    name: 🇬🇧_GB_英国
+    server: 109.169.76.23
+    port: 443
+    password: d69e725c-7c7e-4c75-9786-4859b4e0bbc6
+    network: ws
+    sni: joss.gpj1.web.id
+    tls: true
+    ws-opts:
+      path: /Free-VPN-CF-Geo-Project/109.169.76.23=443
+      headers:
+        Host: joss.gpj1.web.id
+  - type: vmess
+    name: 🇬🇧 英国 01
+    server: v36.heduian.link
+    port: 30836
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 2
+    network: tcp
+    cipher: auto
+    servername: v36.heduian.link
+  - type: vless
+    name: 🇺🇸_US_美国_3
+    server: usa.fastlynew.hosting-ip.com
+    port: 80
+    uuid: b7c88dc6-1513-49c0-be12-1cfe37bcd25b
+    network: ws
+    servername: cd123.global.ssl.fastly.net
+    ws-opts:
+      path: /
+      headers:
+        Host: cd123.global.ssl.fastly.net
   - type: vless
     name: 🇨🇳_CN_中国_7
     server: 62.60.148.21
@@ -175,63 +222,3 @@ proxies:
       short-id: ee6f3e8f44b1f0b6
     client-fingerprint: chrome
     flow: xtls-rprx-vision
-  - type: vless
-    name: 🇷🇺_RU_俄罗斯_2
-    server: 178.236.244.22
-    port: 443
-    uuid: cf97c9a9-441e-43e1-9bd2-f66a198cd87b
-    network: tcp
-    servername: kinopoisk.ru
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: 3LwULpxLmY98y-IDJAeOwZzlVo5s5BnzKz4D5A7lQn4
-      short-id: 586207ca3cf8d389
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: vless
-    name: 🇸🇦_SA_沙特阿拉伯
-    server: 77.110.101.240
-    port: 443
-    uuid: cf97c9a9-441e-43e1-9bd2-f66a198cd87b
-    network: tcp
-    servername: kinopoisk.ru
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: 4Y3V5AIralE3HIAYXCe3beUGsUiBei0mCmbhPXGAgHg
-      short-id: 2fc1abafec7cb87b
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: hysteria2
-    name: 🇬🇧_GB_英国
-    server: 154.16.183.27
-    port: 30102
-    password: 338ce171-d764-4610-8fd5-6688b0d321f0
-    skip-cert-verify: true
-  - type: vless
-    name: 🇺🇸_US_美国_2
-    server: 144.31.27.190
-    port: 443
-    uuid: cf97c9a9-441e-43e1-9bd2-f66a198cd87b
-    network: tcp
-    servername: eh.vk.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: qKDDfmvDvBgtUqhSnJf8OFDCaBPZ1Mr0GKGZyATtggo
-      short-id: a20d3ed244c76426
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: vless
-    name: 🇸🇦_SA_沙特阿拉伯1
-    server: usa1.tunnelx.space
-    port: 2087
-    uuid: 393040206-client-475
-    network: ws
-    servername: ws.usa1.tunnelx.space
-    encryption: none
-    ws-opts:
-      path: /assets/img/banner_v3.webp/#@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL,@V2RAY_SPATIAL
-      headers:
-        Host: ws.usa1.tunnelx.space
