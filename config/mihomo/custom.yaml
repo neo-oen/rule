@@ -3,276 +3,186 @@
 
 # 单节点配置
 proxies:
+  - type: hysteria
+    name: 🇺🇸_US_美国
+    server: 51.159.226.1
+    port: 49003
+    auth-str: dongtaiwang.com
+    protocol: udp
+    sni: apple.com
+    up: "11"
+    down: "55"
+    skip-cert-verify: true
+    alpn:
+      - h3
+  - type: ss
+    name: 🇰🇷_KR_韩国
+    server: p141.panda001.net
+    port: 4652
+    cipher: aes-256-cfb
+    password: qwerREWQ@@
+  - type: hysteria
+    name: 🇫🇷_FR_法国
+    server: 62.210.10.186
+    port: 50011
+    auth-str: dongtaiwang.com
+    protocol: udp
+    sni: apple.com
+    up: 11 Mbps
+    down: 55 Mbps
+    skip-cert-verify: true
+    alpn:
+      - h3
   - type: vmess
-    name: 🇭🇰HK-8.210.134.183-0232
-    server: 8.210.134.183
-    port: 3721
-    uuid: e72f5c6b-220f-40b3-a115-2d81473458cf
-    alterId: 0
+    name: 🇭🇰HK²_21|5.9MB/s|0%|GPT⁺|YT|NF|D+|X
+    server: 95092c03-t6r5s0-tc0fos-8skf.hkt.gotochinatown.net
+    port: 80
+    uuid: 44ee8d70-309d-11eb-a8bf-f23c91cfbbc9
+    alterId: 2
     network: ws
     cipher: auto
+    servername: 95092c03-t6r5s0-tc0fos-8skf.hkt.gotochinatown.net
     ws-opts:
       path: /
-  - type: ss
-    name: 🇨🇳_CN_中国
-    server: 103.149.182.158
-    port: 8388
-    cipher: chacha20-ietf
-    password: asd123456
-  - type: trojan
-    name: 🇯🇵_JP_日本
-    server: 52.199.129.13
-    port: 2752
-    password: BxceQaOe
-    network: tcp
-    sni: t.me/ripaojiedian
-    skip-cert-verify: true
-  - type: vless
-    name: 🇺🇸_US_美国
-    server: 68.64.176.135
-    port: 443
-    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
-    network: ws
-    servername: kuangbao.xiejiang.dpdns.org
-    tls: true
-    ws-opts:
-      path: /?ed=2560
       headers:
-        Host: kuangbao.xiejiang.dpdns.org
+        Host: 95092c03-t6r5s0-tc0fos-8skf.hkt.gotochinatown.net
   - type: vless
-    name: 🇺🇸_US_美国_1
-    server: 51.195.43.174
+    name: 🇪🇸_ES_西班牙
+    server: de.griffon-guard.com
     port: 8443
-    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
-    network: ws
-    servername: kuangbao.xiejiang.dpdns.org
-    tls: true
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: kuangbao.xiejiang.dpdns.org
-  - type: vless
-    name: 🇩🇪_DE_德国
-    server: easygovpnkeys16.com
-    port: 6093
-    uuid: e5603527-ac9b-4f69-906e-34bea11c5835
+    uuid: 6a753f74-b279-44d7-a442-b5cbc425569f
     network: tcp
-    servername: eas1goauth.com
+    servername: apple.com
     tls: true
     encryption: none
     reality-opts:
-      public-key: W91d6Qp8Avflj9K7rMYGGdhxV_W0Ds_FSu_c996zknk
-      short-id: 57e13c11bb421329
+      public-key: IBvNLerjNLpF4OpUX-wGJp8YDZrnKoh-gEItUDNT_Bg
+    client-fingerprint: chrome
+    flow: xtls-rprx-vision
+  - type: vless
+    name: 🇺🇸_US_美国_1
+    server: 69.84.182.13
+    port: 443
+    uuid: 04f3ed37-bfd4-46d3-b4eb-e62d1f32b6f9
+    network: ws
+    servername: fr-1-fr-1.aiopen.sbs
+    tls: true
+    ws-opts:
+      path: /kbjc/fr1
+      headers:
+        Host: fr-1-fr-1.aiopen.sbs
+  - type: vless
+    name: 🇺🇸_US_美国_2
+    server: cc.cybsecguru.com
+    port: 443
+    uuid: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+    network: ws
+    servername: jnir-cdn.6006900.xyz
+    tls: true
+    ws-opts:
+      path: /@JavidnamanIran/Javid-SHAH-KingRezaPahlavi/
+      headers:
+        Host: jnir-cdn.6006900.xyz
+  - type: vless
+    name: 🇧🇪_BE_比利时
+    server: 57.129.137.89
+    port: 443
+    uuid: 69310d96-7045-c206-a2d0-f8ae6e49b726
+    network: ws
+    servername: act12.sni565.netlib.re
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /proxyip=tw.sni2025.netlib.re
+      headers:
+        Host: act12.sni565.netlib.re
+    client-fingerprint: chrome
+    alpn:
+      - h3
+  - type: vless
+    name: 🇺🇸_US_美国_3
+    server: vpn-srv-10.circlevpn.net
+    port: 50858
+    uuid: bf2778fe-c7b3-4b01-a771-16c65cf1b265
+    network: tcp
+    servername: vpn-srv-10.circlevpn.net
+    tls: true
+    client-fingerprint: chrome
+  - type: hysteria2
+    name: 🇨🇳_CN_中国
+    server: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com
+    port: 443
+    password: 676c67c6-5e73-11ee-9a79-f23c9164ca5d
+    skip-cert-verify: true
+    sni: fe12b722-t53wg0-tcp4th-1c4g6.hk1.hyhuawei.com
+  - type: vless
+    name: 🇺🇸_US_美国_4
+    server: clyde.ns.cloudflare.com
+    port: 443
+    uuid: 02e46039-200d-4ae4-ac90-b0d619f72034
+    network: ws
+    servername: redlabell.info
+    tls: true
+    encryption: none
+    ws-opts:
+      path: /aafeuws
+      headers:
+        Host: redlabell.info
+    client-fingerprint: chrome
+  - type: trojan
+    name: 🇺🇸_US_美国_5
+    server: 3.64.121.249
+    port: 22222
+    password: telegram-id-privatevpns
+    network: tcp
+    sni: trojan.burgerip.co.uk
+    skip-cert-verify: true
+  - type: hysteria2
+    name: 🇫🇷_FR_法国_1
+    server: 195.154.206.231
+    port: 33880
+    password: dongtaiwang.com
+    skip-cert-verify: true
+    sni: apple.com
+  - type: vmess
+    name: 🇺🇸US²_36|3.0MB/s|13%|GPT⁺|YT|TK|NF|X
+    server: 74.117.196.232
+    port: 37171
+    uuid: 27104fae-f047-4993-902a-9368d8a3e9bc
+    alterId: 0
+    network: ws
+    cipher: auto
+    servername: imafake.locker
+    ws-opts:
+      path: /speedtest
+      headers:
+        Host: imafake.locker
+    tls: true
+  - type: vless
+    name: 🇪🇸_ES_西班牙_1
+    server: nl.griffon-guard.com
+    port: 8443
+    uuid: 6a753f74-b279-44d7-a442-b5cbc425569f
+    network: tcp
+    servername: apple.com
+    tls: true
+    encryption: none
+    reality-opts:
+      public-key: IBvNLerjNLpF4OpUX-wGJp8YDZrnKoh-gEItUDNT_Bg
     client-fingerprint: chrome
     flow: xtls-rprx-vision
   - type: hysteria2
     name: 🇨🇳_CN_中国_1
-    server: tw.518181.xyz
-    port: 55518
-    password: 3e3201b3-8d9a-4007-a7db-fcf00833e947
-    skip-cert-verify: true
-    sni: ovo.1234567890spcloud.com
-  - type: vless
-    name: 🏳️_unKnow_未知
-    server: at.ultima.foundation
-    port: 22231
-    uuid: 2dfa740c-8069-4993-8b96-c3e5dc540593
-    network: tcp
-    servername: at.ultima.foundation
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: gtur4bFCYQzGf7M6B40RpdBHl6g1epPNhJCMqKPoVng
-      short-id: a9725715bf4c62ff
-    client-fingerprint: edge
-    flow: xtls-rprx-vision
-  - type: vless
-    name: 🇩🇪_DE_德国_1
-    server: broodmother.fonixapp.org
-    port: 49722
-    uuid: 1c1023ac-3d16-494d-be09-65a248f49cd7
-    network: tcp
-    servername: yelp.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: eRuDPGgOwmAbFaNZtqzEfgflU4Jaj2MJNYwAQPkp32s
-      short-id: 23f89c
-      spider-x: /
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: vless
-    name: 🏳️_unKnow_未知_1
-    server: de-cdn.ultima.foundation
+    server: ea74117f-t6ngg0-thd0h1-1rz5s.hk1.hyhuawei.com
     port: 443
-    uuid: 2dfa740c-8069-4993-8b96-c3e5dc540593
-    network: tcp
-    servername: web.max.ru
-    tls: true
-    reality-opts:
-      public-key: FcZ6-LZS5HHqAJ8YwFV_Gu_WxrMuylqxYjBu-1CLVRI
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: vmess
-    name: 🇭🇰HK-1.36.223.11-0701
-    server: 4020d7a1-sv0xs0-swkmdk-1imi4.hk3.p5pv.com
-    port: 80
-    uuid: 40fb1315-191a-11ed-b0ca-f23c91cfbbc9
-    alterId: 2
-    network: ws
-    cipher: auto
-    servername: broadcastlv.chat.bilibili.com
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
+    password: 40e084d6-0316-11f0-90e2-f23c913c8d2b
+    skip-cert-verify: true
+    sni: ea74117f-t6ngg0-thd0h1-1rz5s.hk1.hyhuawei.com
   - type: hysteria2
-    name: 🇹🇭_TH_泰国
-    server: th.518181.xyz
-    port: 55518
-    password: 3e3201b3-8d9a-4007-a7db-fcf00833e947
-    skip-cert-verify: true
-    sni: ovo.1234567890spcloud.com
-  - type: vless
-    name: 🇺🇸_US_美国_2
-    server: 51.195.102.180
-    port: 8443
-    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
-    network: ws
-    servername: kuangbao.xiejiang.dpdns.org
-    tls: true
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: kuangbao.xiejiang.dpdns.org
-  - type: vless
-    name: 🏳️_unKnow_未知_2
-    server: nl5.ultima.foundation
-    port: 22231
-    uuid: 2dfa740c-8069-4993-8b96-c3e5dc540593
-    network: tcp
-    servername: nl.ultima.foundation
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: gtur4bFCYQzGf7M6B40RpdBHl6g1epPNhJCMqKPoVng
-    client-fingerprint: qq
-    flow: xtls-rprx-vision
-  - type: vless
-    name: 🇩🇪_DE_德国_2
-    server: 37.120.191.120
-    port: 54044
-    uuid: 6ec8234b-7192-4603-ac12-2b4bbc9c1113
-    network: tcp
-    servername: smallpdf.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: fNizRKQ3b7EsnXk0-aX1XyXM-kdNq6aoYWsOMRxG6Ug
-      short-id: 1f86
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: vmess
-    name: 🇭🇰HK-1.36.218.178-5027
-    server: 5c4dc91c-sv2sg0-tbnucr-1thfv.hk3.p5pv.com
-    port: 80
-    uuid: 0a4d1c88-fb3a-11ef-8c3f-f23c913c8d2b
-    alterId: 2
-    network: ws
-    cipher: auto
-    servername: 5c4dc91c-sv2sg0-tbnucr-1thfv.hk3.p5pv.com
-    ws-opts:
-      path: /
-      headers:
-        Host: 5c4dc91c-sv2sg0-tbnucr-1thfv.hk3.p5pv.com
-  - type: vless
-    name: 🇺🇸_US_美国_3
-    server: freeyx.cloudflare88.eu.org
-    port: 2096
-    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
-    network: ws
-    servername: kuangbao.xiejiang.dpdns.org
-    tls: true
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: kuangbao.xiejiang.dpdns.org
-  - type: vmess
-    name: 🇭🇰 HK_176
-    server: a58b4c29-sv4n40-syfj90-1r9dt.hk3.p5pv.com
-    port: 80
-    uuid: de003c72-0157-11ef-86da-f23c91cfbbc9
-    alterId: 2
-    network: ws
-    cipher: auto
-    servername: broadcastlv.chat.bilibili.com
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
-  - type: vless
-    name: 🇺🇸_US_美国_4
-    server: 24.199.121.233
+    name: 🇨🇳_CN_中国_2
+    server: 27ea0e8b-t6ngg0-t7x08i-1i87l.hk1.hyhuawei.com
     port: 443
-    uuid: a7e04b44-855e-4fe7-8fa0-31894e928bce
-    network: tcp
-    servername: www.gstatic.com
-    tls: true
-    reality-opts:
-      public-key: RYsjWbL0kjpi144PPllR_2C_KK3a071iGBPUUCsHH1A
-      short-id: a4844ba7
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: vless
-    name: 🇷🇺_RU_俄罗斯
-    server: 193.124.18.13
-    port: 443
-    uuid: 5aba5b77-48eb-4ae2-b60d-5bfee7ac169e
-    network: ws
-    servername: kuangbao.xiejiang.dpdns.org
-    tls: true
-    ws-opts:
-      path: /?ed=2560
-      headers:
-        Host: kuangbao.xiejiang.dpdns.org
-  - type: vmess
-    name: 🇭🇰 HK_130
-    server: b8ffcda3-sv2sg0-sv37gm-81nv.hk3.p5pv.com
-    port: 80
-    uuid: 47e91fb6-25b8-df52-bc18-3cdc8548192f
-    alterId: 2
-    network: ws
-    cipher: auto
-    servername: broadcastlv.chat.bilibili.com
-    ws-opts:
-      path: /
-      headers:
-        Host: broadcastlv.chat.bilibili.com
-  - type: vless
-    name: 🇷🇺_RU_俄罗斯_1
-    server: istanbul.fonixapp.org
-    port: 25059
-    uuid: 88ba0958-d6e8-4c7b-9a80-e5180c520989
-    network: tcp
-    servername: yelp.com
-    tls: true
-    encryption: none
-    reality-opts:
-      public-key: f8rRV7gssAlL-e8teb5xR9q1vRwRJ3pvORgscKSgPAM
-      short-id: 1ec404fc
-      spider-x: /
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
-  - type: vless
-    name: 🇺🇸_US_美国_5
-    server: 142.93.17.125
-    port: 443
-    uuid: a7e04b44-855e-4fe7-8fa0-31894e928bce
-    network: tcp
-    servername: www.gstatic.com
-    tls: true
-    reality-opts:
-      public-key: RYsjWbL0kjpi144PPllR_2C_KK3a071iGBPUUCsHH1A
-      short-id: a4844ba7
-    client-fingerprint: chrome
-    flow: xtls-rprx-vision
+    ports: 30000-60000
+    password: 40d572ec-7f67-11ed-bf1f-f23c913c8d2b
+    sni: 27ea0e8b-t6ngg0-t7x08i-1i87l.hk1.hyhuawei.com
+
