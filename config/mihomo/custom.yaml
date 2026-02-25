@@ -3,143 +3,296 @@
 
 # 单节点配置
 proxies:
-  - name: 🇧🇷_BR_巴西->🇺🇸_US_美国
-    type: vmess
-    server: 188.114.98.0
-    port: 8080
-    uuid: nasnet
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: ws
-    ws-opts:
-      path: /nasnet/cdn
-      headers:
-        Host: nasnet-162191099.sharghdaily.co
-  - name: 🇨🇳_CN_中国
+  - name: 🇺🇸_US_美国
     type: vless
-    server: 156.224.78.8
-    port: 10001
-    uuid: 9c79aceb-4649-44ea-9698-b5e9ecf6d6da
-    servername: www.icloud.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: D_kMOsg1KCtT0tudPFVDXGuEcSqZGtUYqBB-BiIxmls
-      short-id: f7223dab
-  - name: 🇷🇺_RU_俄罗斯
-    type: vless
-    server: 87.239.111.227
+    server: 104.25.92.205
     port: 443
-    uuid: 895f94cb-5567-4731-bc2c-2f89a54bafe4
+    uuid: 2a667767-995c-4892-9719-f52c3db2b0f2
+    network: ws
+    servername: sanYUuu.paGES.dEV
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /eyJqdW5rIjoiQVpjSG1wcDBtd0lHbm05byIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
+      headers:
+        Host: sanyuuu.pages.dev
+  - name: 🇩🇰_DK_丹麦
+    type: vless
+    server: 159.195.60.150
+    port: 2053
+    uuid: f81fac6d-88e7-45e3-b19e-084527859fba
+    network: ws
+    servername: info.marfanet.com
+    tls: true
+    client-fingerprint: firefox
+    ws-opts:
+      path: /api/v1/events
+      headers:
+        Host: info.marfanet.com
+  - name: 🇺🇸_US_美国_1
+    type: vless
+    server: 144.31.232.241
+    port: 2083
+    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
     network: grpc
-    servername: m.vk.ru
+    servername: apple.com
     tls: true
     client-fingerprint: chrome
     grpc-opts:
-      grpc-service-name: grpc
+      grpc-service-name: UpdateService
     reality-opts:
-      public-key: kz54nOxv8IOst-C_GQO5cf6106be0UakNbCEXiDuhHA
-      short-id: 3863adb3
-  - name: 未知
-    type: ss
-    server: 103.186.155.231
-    port: 38388
-    cipher: aes-256-cfb
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 🇷🇺_RU_俄罗斯->🇨🇿_CZ_捷克
+      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
+      short-id: 6da16b1335651b38
+  - name: 🇷🇺_RU_俄罗斯
     type: vless
-    server: 89.169.128.105
-    port: 8443
-    uuid: 3c5c4ccc-b502-42cb-8c42-cfa714db4767
-    servername: yandex.ru
+    server: 217.16.27.217
+    port: 443
+    uuid: eb071647-72a6-46be-8e89-ff3d228d52f6
+    servername: api-maps.yandex.ru
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg
-      short-id: f4b4a6365558ea2e
+      public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
+      short-id: a76ea384b29a4f79
+  - name: 🇺🇸_US_美国_2
+    type: vless
+    server: 45.15.128.75
+    port: 8443
+    uuid: fad2b7e0-d80c-4b7b-a84f-d86e0e49f627
+    servername: max.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: BSsqyfTD-avgb1CyUdy_qJA95HwyMadBMJt7-EQjggk
+      short-id: e473bbc75224b9df
   - name: 🇷🇺_RU_俄罗斯_1
     type: vless
-    server: 78.153.139.68
-    port: 8443
-    uuid: fd8972d7-cf5e-11f0-9970-45e1d80c4039
-    servername: images.apple.com
+    server: 5.188.224.116
+    port: 2083
+    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
+    network: grpc
+    servername: ir.ozone.ru
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: UpdateService
+    reality-opts:
+      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
+      short-id: 6da16b1335651b38
+  - name: 🇨🇳_CN_中国
+    type: vless
+    server: 114.32.9.249
+    port: 16443
+    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    network: ws
+    servername: 63.hhhhh.eu.org
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /114.32.9.249:16443
+      headers:
+        Host: 63.hhhhh.eu.org
+  - name: 🇷🇺_RU_俄罗斯_2
+    type: vless
+    server: 37.139.35.53
+    port: 443
+    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
+    network: grpc
+    servername: eh.vk.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: UpdateService
+    reality-opts:
+      public-key: _oEGDYSSHrqmbHEUoHbp6YnmNTcXTVdWXcDmpi3JdH0
+      short-id: aefbcf7fc283bd55
+  - name: 🇺🇸_US_美国_3
+    type: vless
+    server: 198.62.62.248
+    port: 443
+    uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
+    network: ws
+    servername: tar.alabama-tigr.info
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /love
+      headers:
+        Host: tar.alabama-tigr.info
+  - name: 🇨🇦_CA_加拿大
+    type: vless
+    server: 142.248.80.157
+    port: 443
+    uuid: 4aff5de5-83dc-43c9-a33e-10e6fdb90ed2
+    servername: apple.com
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: pekfYPV5U8EjfQ4_zS5c6I2NnOZ2jUlyMGAWa4FWPF4
-      short-id: 58c512b4422e2517
-  - name: 🇮🇱_IL_以色列
-    type: vmess
-    server: 149.88.95.94
-    port: 40741
-    uuid: 1b8a751b-4909-4fec-f019-907d92e6c47f
-    alterId: 0
-    cipher: auto
-    tls: false
-    skip-cert-verify: false
-    network: none
-  - name: 🇨🇳_CN_中国_1
+      public-key: Wvt6tuMcFY9rWF2BsdAD4DXgLAoxQJxHWlao2BPR23Y
+  - name: 🇧🇪_BE_比利时->🇬🇧_GB_英国
     type: vless
-    server: 2.hk.1.cdn-bilibili.cn
+    server: 143.20.236.51
     port: 443
-    uuid: fcfc091d-81a4-40b7-cbdc-8eb7683617a4
-    servername: www.icloud.com
+    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+    servername: yahoo.com
     tls: true
     flow: xtls-rprx-vision
-    client-fingerprint: safari
+    client-fingerprint: chrome
     reality-opts:
-      public-key: 4cfuj5otn8-uhPUe23OhB6KY8I42AxxJNt4lWIpg_AU
-  - name: 未知_1
+      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+      short-id: c39cc7310a
+  - name: 未知
     type: ss
-    server: 103.186.154.4
+    server: 103.186.155.44
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  - name: 🇩🇪_DE_德国
+    type: vless
+    server: xboxgame-dl.com
+    port: 433
+    uuid: af338e79-8259-4662-a0ff-db6df2414501
+    servername: xboxgame-dl.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: J6v3yhXsfUyoPDmw3Beq9YSxqlW2Ir_5PpULj1xQX2E
+      short-id: 8d4981fb6742b104
+  - name: 未知_1
+    type: ss
+    server: 103.186.154.245
+    port: 38388
+    cipher: aes-256-cfb
+    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  - name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+    type: vless
+    server: WangCai2@193.37.70.63
+    port: 443
+    uuid: "Telegram🇨🇳 "
+    network: ws
+    servername: tn1rr.qzz.io
+    tls: true
+    ws-opts:
+      path: /sg-lnd
+      headers:
+        Host: tn1rr.qzz.io
+  - name: 🇮🇶_IQ_伊拉克
+    type: vless
+    server: deu469.unboundworld.org
+    port: 443
+    uuid: cc9f7840-757a-430b-bddc-a73478bea434
+    servername: www.t3n.de
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs
+  - name: 🇺🇸_US_美国_4
+    type: vless
+    server: 144.31.18.73
+    port: 2083
+    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
+    network: grpc
+    servername: apple.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: UpdateService
+    reality-opts:
+      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
+      short-id: 6da16b1335651b38
+  - name: 🇷🇺_RU_俄罗斯_3
+    type: vless
+    server: regall.appav.online
+    port: 2083
+    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
+    network: grpc
+    servername: ads.x5.ru
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: UpdateService
+    reality-opts:
+      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
+      short-id: 6da16b1335651b38
+  - name: 🇬🇧_GB_英国->🇩🇪_DE_德国
+    type: vless
+    server: 51.250.4.119
+    port: 443
+    uuid: 9a599b2e-5455-44d5-9a72-5c76f28e93e3
+    servername: ads.x5.ru
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: qq
+    reality-opts:
+      public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
+      short-id: 2476f063981ffd92
+  - name: 🇬🇷_GR_希腊
+    type: vless
+    server: 185.234.57.216
+    port: 443
+    uuid: b824f264-8cc3-4669-9f60-47b51ed1aa11
+    servername: yahoo.com
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 2Z2meC9rRAMD3k52ne8dh8PdfRNpOs5T9yObPyFkXyQ
+      short-id: f9fe
+  - name: 🇺🇸_US_美国_5
+    type: vless
+    server: 50.117.3.143
+    port: 443
+    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
+    servername: apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 9ajY_OBOn5CCPnCJTPjxg6J3IWE8uJYAiWQvG9CBGjU
+      short-id: 00684d2eae2cdd16
   - name: 未知_2
     type: ss
-    server: 103.186.154.33
+    server: 103.186.154.218
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
   - name: 未知_3
     type: ss
-    server: 103.186.155.111
+    server: 103.186.154.155
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 未知_4
-    type: ss
-    server: 103.186.154.79
-    port: 38388
-    cipher: aes-256-cfb
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 🇺🇸_US_美国->🇳🇿_NZ_新西兰
+  - name: 🇺🇸_US_美国_6
     type: vless
-    server: 69.84.182.13
+    server: 3.cdnconn.com
+    port: 23335
+    uuid: e384913f-8863-47b4-8858-a84b68abb4a6
+    servername: icloud.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 7Gi8eiUU9TIVbGuvSU16gl5-Aqt7tcCSB9x6CSxyvik
+      short-id: 67b1e94e4dd1ef90
+  - name: 🇳🇱_NL_荷兰
+    type: vless
+    server: s502.okgg.top
     port: 443
-    uuid: da793913-33ef-45c0-806d-f23644c555f2
-    network: ws
-    servername: jp1-jp1.aiopen.sbs
+    uuid: 8c6118b9-78a8-3b3b-a49a-6aa9cb5b1d4e
+    servername: u708330uc21fs502.okgg.top
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: random
+  - name: 🇺🇸_US_美国_7
+    type: vless
+    server: 47.80.12.87
+    port: 443
+    uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
+    servername: api.company-target.com
     tls: true
     client-fingerprint: chrome
-    ws-opts:
-      path: /kbjc/jp1
-      headers:
-        Host: jp1-jp1.aiopen.sbs
-  - name: 未知_5
-    type: ss
-    server: 103.186.154.12
-    port: 38388
-    cipher: aes-256-cfb
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 未知_6
-    type: ss
-    server: 103.186.154.239
-    port: 38388
-    cipher: aes-256-cfb
-    password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+    reality-opts:
+      public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
