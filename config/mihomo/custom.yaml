@@ -4,295 +4,272 @@
 # 单节点配置
 proxies:
   - name: 🇺🇸_US_美国
-    type: vless
-    server: 104.25.92.205
+    type: vmess
+    server: another.py.kawaii520.icu
     port: 443
-    uuid: 2a667767-995c-4892-9719-f52c3db2b0f2
+    uuid: d150ba57-67b9-4eae-b18f-0e956ee9c075
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
     network: ws
-    servername: sanYUuu.paGES.dEV
-    tls: true
-    client-fingerprint: chrome
     ws-opts:
-      path: /eyJqdW5rIjoiQVpjSG1wcDBtd0lHbm05byIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560
+      path: /another
       headers:
-        Host: sanyuuu.pages.dev
-  - name: 🇩🇰_DK_丹麦
+        Host: another-zl.kawaii520.icu
+  - name: 🇦🇺_AU_澳大利亚->🇸🇬_SG_新加坡
     type: vless
-    server: 159.195.60.150
-    port: 2053
-    uuid: f81fac6d-88e7-45e3-b19e-084527859fba
-    network: ws
-    servername: info.marfanet.com
-    tls: true
-    client-fingerprint: firefox
-    ws-opts:
-      path: /api/v1/events
-      headers:
-        Host: info.marfanet.com
-  - name: 🇺🇸_US_美国_1
-    type: vless
-    server: 144.31.232.241
-    port: 2083
-    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
-    network: grpc
-    servername: apple.com
-    tls: true
-    client-fingerprint: chrome
-    grpc-opts:
-      grpc-service-name: UpdateService
-    reality-opts:
-      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
-      short-id: 6da16b1335651b38
-  - name: 🇷🇺_RU_俄罗斯
-    type: vless
-    server: 217.16.27.217
-    port: 443
-    uuid: eb071647-72a6-46be-8e89-ff3d228d52f6
-    servername: api-maps.yandex.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
-      short-id: a76ea384b29a4f79
-  - name: 🇺🇸_US_美国_2
-    type: vless
-    server: 45.15.128.75
+    server: 43.160.248.66
     port: 8443
-    uuid: fad2b7e0-d80c-4b7b-a84f-d86e0e49f627
-    servername: max.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: BSsqyfTD-avgb1CyUdy_qJA95HwyMadBMJt7-EQjggk
-      short-id: e473bbc75224b9df
-  - name: 🇷🇺_RU_俄罗斯_1
-    type: vless
-    server: 5.188.224.116
-    port: 2083
-    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
-    network: grpc
-    servername: ir.ozone.ru
-    tls: true
-    client-fingerprint: chrome
-    grpc-opts:
-      grpc-service-name: UpdateService
-    reality-opts:
-      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
-      short-id: 6da16b1335651b38
-  - name: 🇨🇳_CN_中国
-    type: vless
-    server: 114.32.9.249
-    port: 16443
-    uuid: 3e974f9e-f568-4c2a-a4db-e9b666b4ea9e
+    uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
     network: ws
-    servername: 63.hhhhh.eu.org
+    servername: ylnhh.cc.cd
     tls: true
     client-fingerprint: chrome
     ws-opts:
-      path: /114.32.9.249:16443
+      path: /Telegram🇨🇳@WangCai2
       headers:
-        Host: 63.hhhhh.eu.org
-  - name: 🇷🇺_RU_俄罗斯_2
+        Host: ylnhh.cc.cd
+  - name: 🇨🇳_CN_中国->🇺🇸_US_美国
     type: vless
-    server: 37.139.35.53
-    port: 443
-    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
-    network: grpc
-    servername: eh.vk.com
-    tls: true
-    client-fingerprint: chrome
-    grpc-opts:
-      grpc-service-name: UpdateService
-    reality-opts:
-      public-key: _oEGDYSSHrqmbHEUoHbp6YnmNTcXTVdWXcDmpi3JdH0
-      short-id: aefbcf7fc283bd55
-  - name: 🇺🇸_US_美国_3
-    type: vless
-    server: 198.62.62.248
-    port: 443
-    uuid: 5a4abb78-ecd7-4d68-ab2a-c11a3842f261
+    server: 62.60.156.158
+    port: 8082
+    uuid: 00000000-0000-4000-8000-000000000000
     network: ws
-    servername: tar.alabama-tigr.info
+    servername: sub.mot.ip-ddns.com
     tls: true
-    client-fingerprint: chrome
     ws-opts:
-      path: /love
+      path: /
       headers:
-        Host: tar.alabama-tigr.info
-  - name: 🇨🇦_CA_加拿大
-    type: vless
-    server: 142.248.80.157
-    port: 443
-    uuid: 4aff5de5-83dc-43c9-a33e-10e6fdb90ed2
-    servername: apple.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: Wvt6tuMcFY9rWF2BsdAD4DXgLAoxQJxHWlao2BPR23Y
-  - name: 🇧🇪_BE_比利时->🇬🇧_GB_英国
-    type: vless
-    server: 143.20.236.51
-    port: 443
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
-    servername: yahoo.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
+        Host: sub.mot.ip-ddns.com
   - name: 未知
     type: ss
-    server: 103.186.155.44
+    server: 103.186.154.249
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 🇩🇪_DE_德国
+  - name: 🇺🇸_US_美国->🇸🇨_SC_塞舌尔
     type: vless
-    server: xboxgame-dl.com
-    port: 433
-    uuid: af338e79-8259-4662-a0ff-db6df2414501
-    servername: xboxgame-dl.com
+    server: 144.31.131.0
+    port: 8443
+    uuid: 2dd1a15d-1426-413a-a3b8-a645788bc844
+    servername: bel.speedload.online
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs
+      short-id: a20d3ed244c76426
+  - name: 🇺🇸_US_美国->🇵🇭_PH_菲律宾
+    type: ss
+    server: toy4lkdzy0c.22b74943-12ad-47f4-b705-f2defb6ffea0.org
+    port: 13144
+    cipher: 2022-blake3-aes-256-gcm
+    password: mtMkp+1FttkSLmDOF9blnNMLigcCRacprQS3ry0nf3o=:AAvo+BsgpvvR5lJsdQU32vrMXL7ZAbZJZfETB7bddhQ=
+  - name: 🇺🇸_US_美国_1
+    type: ss
+    server: toy4lkdzy0c.22b74943-12ad-47f4-b705-f2defb6ffea0.org
+    port: 12527
+    cipher: 2022-blake3-aes-256-gcm
+    password: mtMkp+1FttkSLmDOF9blnNMLigcCRacprQS3ry0nf3o=:AAvo+BsgpvvR5lJsdQU32vrMXL7ZAbZJZfETB7bddhQ=
+  - name: 🇺🇸_US_美国_2
+    type: hysteria2
+    server: panel.appleragmcp.com
+    port: 443
+    password: linuxdo.jZiAjLK8pmy4pxp
+    sni: hysteria.apple-rag.com
+    skip-cert-verify: false
+  - name: 🇨🇳_CN_中国
+    type: vless
+    server: video.livecuts.de
+    port: 443
+    uuid: 11ffccca-bab6-423f-ae75-1084b18fffd0
+    network: ws
+    servername: video.livecuts.de
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /video
+      headers:
+        Host: video.livecuts.de
+  - name: 🇨🇭_CH_瑞士
+    type: vless
+    server: che-0001-xr.packet-drop-society.net
+    port: 443
+    uuid: a1ac8a09-98fd-4c11-acc4-3ab272bd220b
+    servername: hls-svod.itunes.apple.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: llaiqC-oIhL_bjc236FPq26LSn7IVhIa4cIC6OVytws
+      short-id: 8453e5fd9af927
+  - name: 🇺🇸_US_美国->🇮🇶_IQ_伊拉克
+    type: vless
+    server: 144.31.130.242
+    port: 8444
+    uuid: aa4ea8e1-86ca-4e5e-9e14-824b139870b4
+    servername: max.ru
     tls: true
     client-fingerprint: chrome
     reality-opts:
-      public-key: J6v3yhXsfUyoPDmw3Beq9YSxqlW2Ir_5PpULj1xQX2E
-      short-id: 8d4981fb6742b104
+      public-key: Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw
+      short-id: 7dbf7d3233971d5c
+  - name: 🇺🇸_US_美国_3
+    type: vless
+    server: 68.64.179.250
+    port: 443
+    uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+    network: ws
+    servername: ylnhh.cc.cd
+    tls: true
+    client-fingerprint: chrome
+    ws-opts:
+      path: /Telegram🇨🇳@WangCai2
+      headers:
+        Host: ylnhh.cc.cd
   - name: 未知_1
     type: ss
-    server: 103.186.154.245
+    server: 103.186.154.148
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国
     type: vless
-    server: WangCai2@193.37.70.63
+    server: us1.maxservice.info
+    port: 8443
+    uuid: dd9aa011-1ebd-11f1-8cae-c3845d39d2de
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: BQlSdhO-YAJQdGl58kbLior2xSnhXtpHOJVE6js3OnE
+      short-id: 0123456789abcdef
+  - name: 🇨🇿_CZ_捷克->🏳️_unKnow_未知
+    type: vless
+    server: 95.85.235.2
+    port: 8083
+    uuid: b36fa3f7-daff-453a-85a1-429b1b981815
+    servername: max.ru
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw
+      short-id: 7dbf7d3233971d5c
+  - name: 🇺🇸_US_美国->🇰🇷_KR_韩国
+    type: ss
+    server: toy4lkdzy0c.22b74943-12ad-47f4-b705-f2defb6ffea0.org
+    port: 14630
+    cipher: 2022-blake3-aes-256-gcm
+    password: mtMkp+1FttkSLmDOF9blnNMLigcCRacprQS3ry0nf3o=:AAvo+BsgpvvR5lJsdQU32vrMXL7ZAbZJZfETB7bddhQ=
+  - name: 🇺🇸_US_美国->🇳🇿_NZ_新西兰
+    type: vless
+    server: 63.141.128.188
     port: 443
-    uuid: "Telegram🇨🇳 "
+    uuid: d46ad20a-4454-4da7-8f9c-87f9152bedee
     network: ws
-    servername: tn1rr.qzz.io
+    servername: d2-jp2.djwstlsweb.top
     tls: true
+    client-fingerprint: chrome
     ws-opts:
-      path: /sg-lnd
+      path: /djjc/jp2
       headers:
-        Host: tn1rr.qzz.io
-  - name: 🇮🇶_IQ_伊拉克
+        Host: d2-jp2.djwstlsweb.top
+  - name: 🇷🇺_RU_俄罗斯
     type: vless
-    server: deu469.unboundworld.org
-    port: 443
-    uuid: cc9f7840-757a-430b-bddc-a73478bea434
-    servername: www.t3n.de
+    server: 85.159.229.121
+    port: 8443
+    uuid: 9a63b59c-5e54-437a-b7a1-2788780a7c13
+    servername: retn.net
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: BhTJ3phnq-Z-10aFKSsj1lzhA8mULR4L6leE4-0WTAs
-  - name: 🇺🇸_US_美国_4
+      public-key: qBcUlVqkzWxGORpDCj_FcNHACi3mrAYTCZeJyVQa5yU
+      short-id: 6b374e33af12fd1e
+  - name: 🇺🇸_US_美国->🇸🇨_SC_塞舌尔_1
+    type: ss
+    server: 144.31.130.99
+    port: 9443
+    cipher: chacha20-ietf-poly1305
+    password: p1R3hJEWeQJGJL42SaYy22CC21uFt_0y
+  - name: 🇨🇳_CN_中国->🇸🇬_SG_新加坡
+    type: vmess
+    server: v12.hdacd.com
+    port: 30812
+    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+  - name: 🇷🇺_RU_俄罗斯_1
     type: vless
-    server: 144.31.18.73
-    port: 2083
-    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
-    network: grpc
-    servername: apple.com
-    tls: true
-    client-fingerprint: chrome
-    grpc-opts:
-      grpc-service-name: UpdateService
-    reality-opts:
-      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
-      short-id: 6da16b1335651b38
-  - name: 🇷🇺_RU_俄罗斯_3
-    type: vless
-    server: regall.appav.online
-    port: 2083
-    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
-    network: grpc
-    servername: ads.x5.ru
-    tls: true
-    client-fingerprint: chrome
-    grpc-opts:
-      grpc-service-name: UpdateService
-    reality-opts:
-      public-key: J6NuOlIq3ypdTFc1TMhDDKmF8BWPnNWZq1EkxD7K-lQ
-      short-id: 6da16b1335651b38
-  - name: 🇬🇧_GB_英国->🇩🇪_DE_德国
-    type: vless
-    server: 51.250.4.119
-    port: 443
-    uuid: 9a599b2e-5455-44d5-9a72-5c76f28e93e3
-    servername: ads.x5.ru
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: qq
-    reality-opts:
-      public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg
-      short-id: 2476f063981ffd92
-  - name: 🇬🇷_GR_希腊
-    type: vless
-    server: 185.234.57.216
-    port: 443
-    uuid: b824f264-8cc3-4669-9f60-47b51ed1aa11
-    servername: yahoo.com
-    tls: true
-    client-fingerprint: chrome
-    reality-opts:
-      public-key: 2Z2meC9rRAMD3k52ne8dh8PdfRNpOs5T9yObPyFkXyQ
-      short-id: f9fe
-  - name: 🇺🇸_US_美国_5
-    type: vless
-    server: 50.117.3.143
-    port: 443
-    uuid: c501c66b-c6c2-456b-b604-80393b83d67f
-    servername: apple.com
+    server: 78.40.116.30
+    port: 8443
+    uuid: dd9aa011-1ebd-11f1-8cae-c3845d39d2de
+    servername: www.microsoft.com
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: 9ajY_OBOn5CCPnCJTPjxg6J3IWE8uJYAiWQvG9CBGjU
-      short-id: 00684d2eae2cdd16
+      public-key: BQlSdhO-YAJQdGl58kbLior2xSnhXtpHOJVE6js3OnE
   - name: 未知_2
     type: ss
-    server: 103.186.154.218
+    server: 103.186.155.223
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
+  - name: 🇺🇸_US_美国_4
+    type: vless
+    server: ams1.maxservice.info
+    port: 8443
+    uuid: dd9aa011-1ebd-11f1-8cae-c3845d39d2de
+    servername: www.microsoft.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: BQlSdhO-YAJQdGl58kbLior2xSnhXtpHOJVE6js3OnE
+      short-id: 0123456789abcdef
   - name: 未知_3
     type: ss
-    server: 103.186.154.155
+    server: 103.186.154.76
     port: 38388
     cipher: aes-256-cfb
     password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV
-  - name: 🇺🇸_US_美国_6
+  - name: 🇺🇸_US_美国->🇸🇨_SC_塞舌尔_2
     type: vless
-    server: 3.cdnconn.com
-    port: 23335
-    uuid: e384913f-8863-47b4-8858-a84b68abb4a6
-    servername: icloud.com
+    server: maroka.axinode.sbs
+    port: 10965
+    uuid: d1209ffb-c159-48d5-b40d-542ce11fc768
+    servername: deepl.com
     tls: true
     flow: xtls-rprx-vision
     client-fingerprint: chrome
     reality-opts:
-      public-key: 7Gi8eiUU9TIVbGuvSU16gl5-Aqt7tcCSB9x6CSxyvik
-      short-id: 67b1e94e4dd1ef90
-  - name: 🇳🇱_NL_荷兰
+      public-key: lHxeD2nYtDb1V7JseV-sUTEuqH6_jie7U_iOARX7cT0
+      short-id: 9f3a7c6d2e8b41af
+  - name: 🇸🇦_SA_沙特阿拉伯->🇩🇪_DE_德国
     type: vless
-    server: s502.okgg.top
-    port: 443
-    uuid: 8c6118b9-78a8-3b3b-a49a-6aa9cb5b1d4e
-    servername: u708330uc21fs502.okgg.top
+    server: 77.110.106.141
+    port: 20
+    uuid: 00000000-0000-4000-8000-000000000000
+    network: ws
+    servername: sub.mot.ip-ddns.com
     tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: random
-  - name: 🇺🇸_US_美国_7
+    ws-opts:
+      path: /
+      headers:
+        Host: sub.mot.ip-ddns.com
+  - name: 🇺🇸_US_美国_5
     type: vless
-    server: 47.80.12.87
+    server: 174.136.205.68
     port: 443
-    uuid: 3e7f67de-648e-4871-b51a-a225214d41ee
-    servername: api.company-target.com
+    uuid: 3ab5680a-4e24-4bb1-89b1-b4e8ba013ca7
+    servername: navi.bankrate.com
     tls: true
     client-fingerprint: chrome
     reality-opts:
-      public-key: TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw
+      public-key: UT9tFQOdy54SeW_tg-XQN3QkGYoWUpO_88XFXijkrXc
+      short-id: 2da72ce6
