@@ -1,22 +1,22 @@
 # 代理补充列表
+# 配合 Mihomo/Clash 规则：RULE-SET,proxylite,🚀 默认代理
+# 每行仅写匹配条件，策略由主配置 rules 指定。
 
-# 域名后缀匹配
-DOMAIN-SUFFIX,mypikpak.com,📲 Telegram
+# 域名后缀
+DOMAIN-SUFFIX,mypikpak.com
 
-# 域名关键字匹配
-# DOMAIN-KEYWORD,1e100
+# 域名关键字（慎用）
+# DOMAIN-KEYWORD,example
 
-# 国外DNS
+# 国外 DNS（防止 DNS 泄露走直连）
 DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,1dot1dot1dot1.cloudflare-dns.com
 DOMAIN-SUFFIX,dot.sb
 DOMAIN-SUFFIX,dns.umbrella.com
 DOMAIN-SUFFIX,dns.quad9.net
-DOMAIN-SUFFIX,dns.google
 DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,doh.dns.sb
 DOMAIN-SUFFIX,doh.opendns.com
-DOMAIN-SUFFIX,dns.quad9.net
 DOMAIN-SUFFIX,hk-hkg.doh.sb
 IP-CIDR,8.8.8.8/32,no-resolve
 IP-CIDR,8.8.4.4/32,no-resolve

@@ -1,6 +1,14 @@
 # 直连补充列表
+# TUN 开启时流量仍经 Clash，但出站选「直连」，不经过代理节点。
+# 配合 Mihomo/Clash 规则：RULE-SET,directlite,直连
+# 须写在 geolocation-!cn 之前，否则国外域名仍会走代理。
 
-# 域名后缀匹配
-DOMAIN-SUFFIX,baidu.com
+# ---------- 内网 ----------
+DOMAIN-SUFFIX,mirrorfs.com
+DOMAIN-SUFFIX,hf.haier
 
+# ---------- 走代理异常、关 TUN 才正常 ----------
+DOMAIN-SUFFIX,langbot.dev
+DOMAIN-SUFFIX,langbot.app
 
+# 新增站点请用 DOMAIN-SUFFIX，避免 DOMAIN-KEYWORD 误伤
