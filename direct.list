@@ -6,6 +6,7 @@
 # ---------- 内网 ----------
 DOMAIN-SUFFIX,mirrorfs.com
 DOMAIN-SUFFIX,hf.haier
+DOMAIN-SUFFIX,haierfinancial.com
 
 # ---------- 走代理异常、关 TUN 才正常 ----------
 DOMAIN-SUFFIX,langbot.dev
