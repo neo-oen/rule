@@ -5,6 +5,11 @@
 # 域名后缀
 DOMAIN-SUFFIX,mypikpak.com
 
+# ---------- 一分机场（主域名被墙，漏网之鱼走直连会失败）----------
+DOMAIN,xn--4gqx1hgtfdmt.com
+DOMAIN-SUFFIX,yfjc.xyz
+DOMAIN-SUFFIX,yfjc.sbs
+
 # 域名关键字（慎用）
 # DOMAIN-KEYWORD,example
 
